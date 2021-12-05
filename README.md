@@ -1,41 +1,18 @@
-# Ubuntu Touch device tree for the Xiaomi Redmi Note 7 Pro (violet)
+# I'm trying to port Ubuntu Touch for Xiaomi Redmi 5 (Rosy) using Halium-9.0 - Standalone kernel method
+# Kernel source: https://github.com/Subash-Baskaran/android_kernel_xiaomi_rosy.git Branch: lineage-17.1
+# Compilation Scrpit: This script
 
-This is based on Halium 9.0, and uses the mechanism described in [this
-page](https://github.com/ubports/porting-notes/wiki/GitLab-CI-builds-for-devices-based-on-halium_arm64-(Halium-9)).
+1. I'm following the documentation https://docs.ubports.com/en/latest/porting/introduction/index.html
+2. Initializing the build process ./build.sh -b workdir
+3. Greeted with below error:
+      https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error1
+      This was sorted out by adding -no-integrated-as to the make command in ./build/build-kernel.sh
+3. Running the script again ./build.sh -b workdir throws new set of errors as below
+4.    https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error2
+5.    This was sorted out by adding +$(objtree)/scripts/asn1_compiler: $(objtree)/scripts/asn1_compiler.c as specified in here https://patchwork.kernel.org/project/linux-kbuild/patch/1440666497-1420-1-git-send-email-p.fedin@samsung.com/
+6. Running the script again ./build.sh -b workdir surprises with below error where google doesn't want me to help.
+7.     https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error3
 
-This project can be built manually (see the instructions below) or you can
-download the ready-made artifacts from gitlab: take the [latest
-archive](https://gitlab.com/ubports/community-ports/android9/xiaomi-redmi-note-7-pro/xiaomi-violet/-/jobs/artifacts/master/download?job=devel-flashable),
-unpack the `artifacts.zip` file (make sure that all files are created inside a
-directory called `out/`, then follow the instructions in the
-[Install](#install) section.
+can anyone point me in right direction? that would great to me. Thank in advance!
 
-
-## How to build
-
-To manually build this project, follow these steps:
-
-```bash
-./build.sh -b bd  # bd is the name of the build directory
-./build/prepare-fake-ota.sh out/device_violet.tar.xz ota
-./build/system-image-from-ota.sh ota/ubuntu_command out
-```
-
-
-## Install
-
-After the build process has successfully completed, run
-
-```bash
-fastboot flash boot out/boot.img
-fastboot flash system out/system.img
-```
-
-## Splash screen
-
-If you'd like to change the splash screen, run
-
-```
-./splash/generate.sh out
-fastboot flash splash out/splash.img
-```
+Complete build log can be found here https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/complete_log.txt?raw=true
