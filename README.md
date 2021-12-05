@@ -6,10 +6,10 @@
 2. Initializing the build process 
    ./build.sh -b workdir
 4. Greeted with below error:
-      https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error1
+       https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error1
       This was sorted out by adding -no-integrated-as to the make command in ./build/build-kernel.sh
 3. Running the script again ./build.sh -b workdir throws new set of errors as below
-4.    https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error2
+4.     https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error2
 5.    This was sorted out by adding +$(objtree)/scripts/asn1_compiler: $(objtree)/scripts/asn1_compiler.c as specified in here https://patchwork.kernel.org/project/linux-kbuild/patch/1440666497-1420-1-git-send-email-p.fedin@samsung.com/
 6. Running the script again ./build.sh -b workdir surprises with below error.
 7.     https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error3
