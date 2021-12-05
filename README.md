@@ -3,8 +3,9 @@
 # Compilation Scrpit: This script
 
 1. I'm following the documentation https://docs.ubports.com/en/latest/porting/introduction/index.html
-2. Initializing the build process ./build.sh -b workdir
-3. Greeted with below error:
+2. Initializing the build process 
+   ./build.sh -b workdir
+4. Greeted with below error:
       https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/error1
       This was sorted out by adding -no-integrated-as to the make command in ./build/build-kernel.sh
 3. Running the script again ./build.sh -b workdir throws new set of errors as below
