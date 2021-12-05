@@ -18,6 +18,7 @@ Compilation Scrpit: (This Script) https://github.com/Subash-Baskaran/kernel_comp
 8.	For this error google decided not to help me out
 
 I tried two build environment Ubuntu 18.04 and 20.04 installed in Virtualbox
+
 Can anyone point me in right direction? that would great to me. Thank in advance!
 
 Complete build log can be found here https://github.com/Subash-Baskaran/kernel_compilation_script_rosy/blob/master/complete_log.txt?raw=true
