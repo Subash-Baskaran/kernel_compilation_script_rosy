@@ -1,0 +1,31 @@
+set -e;  echo '  LINK    vmlinux'; /bin/bash /home/rosyubport/Downloads/LOS/workdir/downloads/android_kernel_xiaomi_rosy/scripts/link-vmlinux.sh /home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL  --no-undefined -X --build-id ; printf '%s\n' 'cmd_vmlinux := /bin/bash /home/rosyubport/Downloads/LOS/workdir/downloads/android_kernel_xiaomi_rosy/scripts/link-vmlinux.sh /home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL  --no-undefined -X --build-id ' > ./.vmlinux.cmd
+Segmentation fault (core dumped)
+  LINK    vmlinux
+  LD      vmlinux.o
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find arch/arm64/kernel/head.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find init/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find usr/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find arch/arm64/kernel/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find arch/arm64/mm/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find arch/arm64/net/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find arch/arm64/crypto/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find kernel/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find mm/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find fs/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find ipc/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find security/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find crypto/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find block/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find arch/arm64/lib/lib.a: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find lib/lib.a: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find drivers/firmware/efi/libstub/lib.a: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find arch/arm64/lib/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find lib/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find drivers/firmware/efi/libstub/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find drivers/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find sound/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find firmware/built-in.o: No such file or directory
+/home/rosyubport/Downloads/LOS/workdir/downloads/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld: cannot find net/built-in.o: No such file or directory
+make[1]: *** [/home/rosyubport/Downloads/LOS/workdir/downloads/android_kernel_xiaomi_rosy/Makefile:944: vmlinux] Error 1
+make[1]: Leaving directory '/home/rosyubport/Downloads/LOS/workdir/downloads/KERNEL_OBJ'
+make: *** [Makefile:145: sub-make] Error 2
