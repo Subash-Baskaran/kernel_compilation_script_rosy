@@ -1,0 +1,41 @@
+// ...
+../kernel/bounds.c:18:2: error: unexpected token at start of statement
+        DEFINE(NR_PAGEFLAGS, __NR_PAGEFLAGS);
+        ^
+../include/linux/kbuild.h:5:25: note: expanded from macro 'DEFINE'
+        asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+                        ^
+<inline asm>:2:1: note: instantiated into assembly here
+->NR_PAGEFLAGS 21 __NR_PAGEFLAGS
+^
+../kernel/bounds.c:19:2: error: unexpected token at start of statement
+        DEFINE(MAX_NR_ZONES, __MAX_NR_ZONES);
+        ^
+../include/linux/kbuild.h:5:25: note: expanded from macro 'DEFINE'
+        asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+                        ^
+<inline asm>:2:1: note: instantiated into assembly here
+->MAX_NR_ZONES 3 __MAX_NR_ZONES
+^
+../kernel/bounds.c:21:2: error: unexpected token at start of statement
+        DEFINE(NR_CPUS_BITS, ilog2(CONFIG_NR_CPUS));
+        ^
+../include/linux/kbuild.h:5:25: note: expanded from macro 'DEFINE'
+        asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+                        ^
+<inline asm>:2:1: note: instantiated into assembly here
+->NR_CPUS_BITS 3 ilog2(CONFIG_NR_CPUS)
+^
+../kernel/bounds.c:23:2: error: unexpected token at start of statement
+        DEFINE(SPINLOCK_SIZE, sizeof(spinlock_t));
+        ^
+../include/linux/kbuild.h:5:25: note: expanded from macro 'DEFINE'
+        asm volatile("\n->" #sym " %0 " #val : : "i" (val))
+                        ^
+<inline asm>:2:1: note: instantiated into assembly here
+->SPINLOCK_SIZE 4 sizeof(spinlock_t)
+^
+4 errors generated.
+make[2]: *** [kernel/bounds.s] Error 1
+make[1]: *** [prepare0] Error 2
+make: *** [sub-make] Error 2
