@@ -1,6 +1,7 @@
 # I'm trying to port Ubuntu Touch for Xiaomi Redmi 5 (Rosy) using Halium-9.0 - Standalone kernel method
 
 Kernel source: https://github.com/Subash-Baskaran/android_kernel_xiaomi_rosy.git Branch: lineage-17.1
+
 Compilation Scrpit: (This Script) https://github.com/Subash-Baskaran/kernel_compilation_script_rosy
 
 1. I'm following the documentation https://docs.ubports.com/en/latest/porting/introduction/index.html
