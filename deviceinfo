@@ -6,7 +6,7 @@ deviceinfo_os_version="9.0.0"
 deviceinfo_os_patch_level="2021-11"
 deviceinfo_kernel_source="https://github.com/Subash-Baskaran/android_kernel_xiaomi_rosy-1.git"
 deviceinfo_kernel_source_branch="lineage-16.0"
-deviceinfo_kernel_defconfig="rosy_defconfig"
+deviceinfo_kernel_defconfig="rosy_halium_defconfig"
 
 deviceinfo_kernel_cmdline="androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.usbconfigfs=true androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 loop.max_part=7 buildvariant=userdebug"
 deviceinfo_kernel_clang_compile="false"
