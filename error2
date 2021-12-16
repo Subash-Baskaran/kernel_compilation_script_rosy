@@ -1,3 +1,0 @@
-make [2]: *** There is no rule to build the target 'crypto / asymmetric_keys / x509-asn1.c', necessary for 'crypto / asymmetric_keys / x509-asn1.o'. Stop.
-make [1]: *** [scripts / Makefile.build: 402: crypto / asymmetric_keys] Error 2
-make: *** [Makefile: 962: crypto] Error 2
